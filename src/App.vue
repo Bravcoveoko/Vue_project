@@ -16,7 +16,7 @@
         <h6>Todo</h6>
         <draggable class="draggable-list" :list="tasks.todos" group="tasks" >
 
-          <task v-bind:tasks_list="tasks.todos" v-bind:color_class="todo_color" v-bind:task_name="todo" v-on:dblclick="textable"/>
+          <task v-bind:tasks_list="tasks.todos" v-bind:color_class="todo_color" v-bind:task_name="todo" v-on:dblclick="textable" v-on:click="add_item"/>
 
         </draggable>
       </div>
@@ -34,7 +34,7 @@
         <h6>Ready to go </h6>
         <draggable class="draggable-list" :list="tasks.completed" group="tasks">
 
-          <task v-bind:tasks_list="tasks.completed" v-bind:color_class="done" v-bind:task_name="ready" v-on:dblclick="textable"/>
+          <task v-bind:tasks_list="tasks.completed" v-bind:color_class="done" v-bind:task_name="ready" v-on:dblclick="textable" v-on:click="add_item"/>
 
         </draggable>
       </div>
